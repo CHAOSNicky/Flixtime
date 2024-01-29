@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flixtime</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-title">Flixtime</div>
+    </nav>
+    <div class="container">
+        <h1>Search your movie here</h1>
+        <div class="search-box">
+            <input type="text" class="search-input" id="searchInput" placeholder="Enter your search term">
+            <button class="search-btn" onclick="searchMovies()">Search</button>
+        </div>
+    </div>
+
+    <div class="movie-container" id="movieContainer">
+        <!-- Movies will be dynamically added here -->
+    </div>
+
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

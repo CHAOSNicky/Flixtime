@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation bar styles */
+.navbar {
+    background-color: #007bff;
+    padding: 10px;
+}
+
+.navbar-title {
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.movie-details {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.poster-container {
+    flex: 1;
+    align-items: center;
+}
+
+.poster-img {
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+    /* Set a maximum width for the poster image */
+    height: auto;
+    /* Ensure the image maintains its aspect ratio */
+}
+
+.movie-info {
+    flex: 2;
+}
+
+* Additional styles for the movie details layout */ .movie-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-cast,
+.movie-details-info {
+    margin-top: 20px;
+}
+
+.movie-details-info h3 {
+    margin: 0;
+    /* Remove default h3 margin */
+    margin-bottom: 5px;
+    /* Add a small margin below each h3 heading */
+}
+
+.movie-details-info span {
+    display: block;
+    margin-bottom: 10px;
+    /* Add margin below each detail span */
+}
+
+/* Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .movie-details {
+        flex-direction: column;
+    }
+
+    .poster-container {
+        margin-bottom: 20px;
+    }
+
+    .poster-img {
+        max-width: 100%;
+        /* Make the poster image occupy the full container width */
+        height: auto;
+        /* Ensure the image maintains its aspect ratio */
+    }
+}

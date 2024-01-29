@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flixtime - <%= movie.Title %>
+  </title>
+  <link rel="stylesheet" type="text/css" href="/css/movie.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar-title">Flixtime</div>
+  </nav>
+
+  <div class="container">
+    <div class="movie-details">
+      <div class="poster-container">
+        <img src="<%= movie.Poster !== " N/A" ? movie.Poster : "https://via.placeholder.com/150" %>" alt="<%=
+          movie.Title %>" class="poster-img">
+      </div>
+      <div class="movie-info">
+        <h1>
+          <%= movie.Title %>
+        </h1>
+        <div class="movie-cast">
+          <h3>Cast:</h3>
+          <% movie.Actors.split(', ').forEach(function(actor) { %>
+            <p><%= actor %></p>
+          <% }); %>
+        </div>
+        <div class="movie-details-info">
+          <h3>Year:</h3> <span><%= movie.Year %></span><br>
+          <h3>Genre:</h3> <span><%= movie.Genre %></span><br>
+          <h3>Plot:</h3> <span><%= movie.Plot %></span><br>
+          <h3>IMDb Rating:</h3> <span><%= movie.imdbRating %></span><br>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
